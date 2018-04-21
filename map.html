@@ -20,7 +20,7 @@
 				<!-- Intro -->
 					<div id="intro">
 						<h1>Project RISE</h1>
-						<p>Discover other Exponentialists</p>
+						<p>Discover Exponentialists</p>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -39,18 +39,33 @@
 							<li><a href="learnmore.html">Learn More</a></li>
 						</ul>
 					</nav>
-                    <div id="map"></div>
+                    <div id="map", "locationmarker"></div>
                         <script>
                             function initMap() {
-                                var uluru = {lat: 31.9686, lng: -99.9018};
+                                var austin = {lat: 30.267153, lng: -97.74306079999997};
+                                var dallas = {lat: 32.7766642, lng: -96.79698789999998}
+                                var thewoodlands = {lat: 30.1658207, lng: -95.46126249999998}
+                                var collegestation = {lat: 30.627977, lng: -96.33440680000001}
                                 var map = new google.maps.Map(document.getElementById('map'), {
                                     zoom: 6,
-                                    center: uluru
+                                    center: {lat: 31.9685988, lng: -99.90181310000003}
                                 });
                                 var marker = new google.maps.Marker({
-                                position: uluru,
+                                position: markerPosition,
                                 map: map
-                                });
+//                                });
+//                                var marker = new google.maps.Marker({
+//                                position: dallas,
+//                                map: map
+//                                });
+//                                var marker = new google.maps.Marker({
+//                                position: thewoodlands,
+//                                map: map
+//                                });
+//                                var marker = new google.maps.Marker({
+//                                position: collegestation,
+//                                map: map
+//                                });
                             }
                         </script>
                         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD9KjdSDIwfOTT34RT96YFtQMivEzqsxo&callback=initMap">
