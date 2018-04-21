@@ -3011,7 +3011,13 @@
 
 /* Wrapper */
 
-	#wrapper {
+    #map {
+        height: 800px;
+        width: 80%;
+        align-items: center
+       }
+
+    #wrapper {
 		-moz-transition: opacity 0.5s ease;
 		-webkit-transition: opacity 0.5s ease;
 		-ms-transition: opacity 0.5s ease;
