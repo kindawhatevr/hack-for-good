@@ -39,59 +39,64 @@
 							<li><a href="learnmore.html">Learn More</a></li>
 						</ul>
 					</nav>
-                    <div id="map", "locationmarker"></div>
-                        <script>
-                            function initMap() {
+                    
+                    <!-- Map -->
+                    <div id="map", id="locationmarker"></div>
+                    
+<!--                    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>-->
+                    
+                    <!-- Map Script -->
+                    <script>
+                        function initMap() {
+                            var map = new google.maps.Map(document.getElementById('map'), {
+                                zoom: 6,
+                                //Centered on Texas
+                                center: {lat: 31.9685988, lng: -99.90181310000003}
+                            });
+                            <!-- Example Locations -->
                                 var austin = {lat: 30.267153, lng: -97.74306079999997};
                                 var dallas = {lat: 32.7766642, lng: -96.79698789999998}
                                 var thewoodlands = {lat: 30.1658207, lng: -95.46126249999998}
                                 var collegestation = {lat: 30.627977, lng: -96.33440680000001}
-                                var map = new google.maps.Map(document.getElementById('map'), {
-                                    zoom: 6,
-                                    center: {lat: 31.9685988, lng: -99.90181310000003}
+
+//                            for(var index = 0; index < locationArray.length; index++){
+//                                var lat = '';
+//                                var lng = '';
+//                                var zip = locationArray[index];
+//                                geocoder.geocode( { 'zip': zip}, function(results, status) {
+//                                if (status == google.maps.GeocoderStatus.OK) {
+//                                    lat = results[0].geometry.location.lat();
+//                                    lng = results[0].geometry.location.lng();
+//                                    markerPosition = {lat: lat, lng: lng}
+//                            var marker = new google.maps.Marker({
+//                            position: markerPosition,
+//                            map: map
+//                                });
+                                var marker = new google.maps.Marker({
+                                    position: austin,
+                                    map: map
+                                })
+                                var marker = new google.maps.Marker({
+                                    position: dallas,
+                                    map: map
                                 });
                                 var marker = new google.maps.Marker({
-                                position: markerPosition,
-                                map: map
-//                                });
-//                                var marker = new google.maps.Marker({
-//                                position: dallas,
-//                                map: map
-//                                });
-//                                var marker = new google.maps.Marker({
-//                                position: thewoodlands,
-//                                map: map
-//                                });
-//                                var marker = new google.maps.Marker({
-//                                position: collegestation,
-//                                map: map
-//                                });
+                                    position: thewoodlands,
+                                    map: map
+                                });
+                                var marker = new google.maps.Marker({
+                                    position: collegestation,
+                                    map: map
+                                });
                             }
+                        
                         </script>
                         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD9KjdSDIwfOTT34RT96YFtQMivEzqsxo&callback=initMap">
                         </script>
 
-<!--
-				 Main 
-					<div id="main">
-
-						 Featured Post 
-							<article class="post featured">
-								<header class="major">
-									<h2>Find other Exponentialists</h2>
-									<p>This is a tool for discovering and tracking the impact of Exponentialists involved with <a href="https://www.projectrisetexas.org/">Project RISE</a>.</p>
-								</header>
-								<ul class="actions">
-									<li><a href="#" class="button big">Full Story</a></li>
-								</ul>
-							</article>
-
-					</div>
--->
-
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+                        <ul><li>&copy; <a href="httsp://lynnzesprowls.com">Lynnze Sprowls</a></li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 					</div>
 
 			</div>
