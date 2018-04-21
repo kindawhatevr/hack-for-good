@@ -3014,7 +3014,7 @@
     #map {
         height: 800px;
         width: 80%;
-        align-items: center
+        margin:auto
        }
 
     #wrapper {
